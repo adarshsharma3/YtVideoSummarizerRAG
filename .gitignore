@@ -8,3 +8,43 @@ wheels/
 
 # Virtual environments
 .venv
+# --- Backend (Python/FastAPI) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Environment Variables (CRITICAL: Never commit your Gemini/Qdrant keys)
+.env
+
+# Build & Distribution
+dist/
+build/
+*.egg-info/
+
+# --- Frontend (React) ---
+# Assuming your React app is inside the 'Frontend' folder shown in your sidebar
+Frontend/node_modules/
+Frontend/build/
+Frontend/.env.local
+Frontend/.env.development.local
+Frontend/.env.test.local
+Frontend/.env.production.local
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+
+# --- Database & Infrastructure ---
+# Ignore local Qdrant data storage if you are using volume mounting
+qdrant_storage/
+docker-compose.override.yml
+
+# --- System & Editors ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.bak
